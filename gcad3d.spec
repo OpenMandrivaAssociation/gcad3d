@@ -2,7 +2,7 @@
 
 Name:		gcad3d
 Version:	1.80
-Release:	%mkrel 1
+Release:	2
 Summary:	A 3D CAD CAM application
 Group:		Graphics
 License:	Freeware
