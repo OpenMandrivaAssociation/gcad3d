@@ -53,11 +53,11 @@ Terminal=false
 %ifarch x86_64
 cp -r %{oname}-%{version}-64/* %{buildroot}/
 %else
-%__cp -r %{oname}-%{version}-32/* %{buildroot}/
+cp -r %{oname}-%{version}-32/* %{buildroot}/
 %endif
 
-%__mkdir_p %{buildroot}%{_datadir}/applications
-%__cat > %{buildroot}%{_datadir}/applications/%{name}.desktop <<@@@
+mkdir -p %{buildroot}%{_datadir}/applications
+cat > %{buildroot}%{_datadir}/applications/%{name}.desktop <<@@@
 [Desktop Entry]
 Name=gCAD3D
 Exec=%{name}
@@ -68,10 +68,7 @@ Categories=Graphics;
 Terminal=false
 @@@
 
-%__rm -rf %{buildroot}%{_datadir}/menu
-
-%clean
-%__rm -rf %{buildroot}
+rm -rf %{buildroot}%{_datadir}/menu
 
 %files
 %{_bindir}/%{name}
