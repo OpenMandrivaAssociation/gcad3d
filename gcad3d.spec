@@ -1,14 +1,15 @@
 %define		oname	gCAD3D
+%define		debug_package %{nil}
 
 Name:		gcad3d
-Version:	1.80
-Release:	3
+Version:	2.28
+Release:	1
 Summary:	A 3D CAD CAM application
 Group:		Graphics
 License:	Freeware
 URL:		http://www.gcad3d.org/
 # source is extracted from .deb packages in Downloads section
-Source0:	%{name}-%{version}.tar.bz2
+Source0:	%{name}-%{version}.tar.gz
 %rename		%{oname}
 
 %description
@@ -50,7 +51,7 @@ Terminal=false
 
 %__mkdir_p %{buildroot}%{_prefix}
 %ifarch x86_64
-%__cp -r %{oname}-%{version}-64/* %{buildroot}/
+cp -r %{oname}-%{version}-64/* %{buildroot}/
 %else
 %__cp -r %{oname}-%{version}-32/* %{buildroot}/
 %endif
