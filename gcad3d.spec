@@ -11,6 +11,7 @@ URL:		http://www.gcad3d.org/
 # source is extracted from .deb packages in Downloads section
 Source0:	%{name}-%{version}.tar.gz
 %rename		%{oname}
+ExclusiveArch:	%{ix86} x86_64
 
 %description
 gCAD3D is a 3D CAD CAM application that features an integrated 3D OpenGL
