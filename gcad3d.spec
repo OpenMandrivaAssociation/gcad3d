@@ -7,7 +7,7 @@ Release:	1
 Summary:	A 3D CAD CAM application
 Group:		Graphics
 License:	Freeware
-URL:		http://www.gcad3d.org/
+URL:		https://www.gcad3d.org/
 # source is extracted from .deb packages in Downloads section
 Source0:	%{name}-%{version}.tar.gz
 %rename		%{oname}
